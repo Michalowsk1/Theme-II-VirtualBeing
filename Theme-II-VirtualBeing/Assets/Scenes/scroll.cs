@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class scroll : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float speed;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private Renderer renderers;
+
+    private void Update()
     {
-        
+        renderers.material.mainTextureOffset += new Vector2(speed * Time.deltaTime, 0);
     }
+    //Ref:https://www.youtube.com/watch?v=Wz3nbQPYwss
 }
