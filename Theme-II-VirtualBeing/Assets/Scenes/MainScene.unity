@@ -148,11 +148,11 @@ Transform:
   m_GameObject: {fileID: 10732569}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.991, y: -0.5900001, z: -0.039893787}
+  m_LocalPosition: {x: 1.9909999, y: -0.59, z: -0.039893784}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1136071153}
+  m_Father: {fileID: 303629980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &10732571
 SpriteRenderer:
@@ -383,11 +383,11 @@ Transform:
   m_GameObject: {fileID: 78191254}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.29, y: -2.958, z: -0.0036374102}
-  m_LocalScale: {x: 0.8747055, y: 0.8747055, z: 0.8747055}
+  m_LocalPosition: {x: -3.2900002, y: -2.9580002, z: -0.0036374102}
+  m_LocalScale: {x: 0.87470555, y: 0.87470555, z: 0.87470555}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1866831199}
+  m_Father: {fileID: 927585756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &78191256
 SpriteRenderer:
@@ -549,6 +549,7 @@ GameObject:
   - component: {fileID: 137017739}
   - component: {fileID: 137017738}
   - component: {fileID: 137017737}
+  - component: {fileID: 137017740}
   m_Layer: 5
   m_Name: activity 1 (3)
   m_TagString: Untagged
@@ -619,7 +620,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 137017738}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 137017740}
+        m_TargetAssemblyTypeName: PurchaseShoes, Assembly-CSharp
+        m_MethodName: PurchasedShoes
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &137017738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,6 +671,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137017735}
   m_CullTransparentMesh: 1
+--- !u!114 &137017740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137017735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 636e82a1a8c087345b2d21a177680bdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeShoe: {fileID: 303629979}
+  shoe: {fileID: 1139055054}
+  oldShoe: {fileID: 927585755}
 --- !u!1 &151786821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,11 +1190,11 @@ Transform:
   m_GameObject: {fileID: 227732213}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.29, y: -2.958, z: -0.0036374102}
-  m_LocalScale: {x: 0.8747055, y: 0.8747055, z: 0.8747055}
+  m_LocalPosition: {x: -3.2900002, y: -2.9580002, z: -0.0036374102}
+  m_LocalScale: {x: 0.87470555, y: 0.87470555, z: 0.87470555}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1866831199}
+  m_Father: {fileID: 927585756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &227732215
 SpriteRenderer:
@@ -1600,6 +1628,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295893994}
   m_CullTransparentMesh: 1
+--- !u!1 &303629979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303629980}
+  m_Layer: 0
+  m_Name: Shoes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &303629980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303629979}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 10732570}
+  - {fileID: 1587951933}
+  m_Father: {fileID: 1136071153}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &389903972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,6 +2198,7 @@ GameObject:
   - component: {fileID: 515382731}
   - component: {fileID: 515382730}
   - component: {fileID: 515382729}
+  - component: {fileID: 515382732}
   m_Layer: 5
   m_Name: activity 1 (2)
   m_TagString: Untagged
@@ -2207,7 +2269,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 515382730}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 515382732}
+        m_TargetAssemblyTypeName: PurchaseCoat, Assembly-CSharp
+        m_MethodName: PurchasedCoat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &515382730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2246,6 +2320,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515382727}
   m_CullTransparentMesh: 1
+--- !u!114 &515382732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515382727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed18a662fcb55f4db29ce3161ddeb4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeCoat: {fileID: 2073959909}
+  coat: {fileID: 1573663475}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3436,6 +3524,7 @@ GameObject:
   - component: {fileID: 868907218}
   - component: {fileID: 868907217}
   - component: {fileID: 868907216}
+  - component: {fileID: 868907219}
   m_Layer: 5
   m_Name: activity 1 (1)
   m_TagString: Untagged
@@ -3506,7 +3595,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 868907217}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 868907219}
+        m_TargetAssemblyTypeName: PurchaseBeanie, Assembly-CSharp
+        m_MethodName: PurchaseBeanies
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &868907217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3545,6 +3646,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868907214}
   m_CullTransparentMesh: 1
+--- !u!114 &868907219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868907214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f43f9dabcd38824e87707516f8c28aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeBeanie: {fileID: 2069914132}
+  Beanie: {fileID: 968541837}
 --- !u!1 &922959743
 GameObject:
   m_ObjectHideFlags: 0
@@ -3620,6 +3735,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922959743}
   m_CullTransparentMesh: 1
+--- !u!1 &927585755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 927585756}
+  m_Layer: 0
+  m_Name: Shoes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &927585756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927585755}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 78191255}
+  - {fileID: 227732214}
+  m_Father: {fileID: 1866831199}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &968541837
 GameObject:
   m_ObjectHideFlags: 0
@@ -4079,11 +4227,43 @@ Transform:
   m_LocalScale: {x: 3.9981, y: 3.9981, z: 3.9981}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 10732570}
   - {fileID: 2069914133}
   - {fileID: 2073959910}
-  - {fileID: 1587951933}
+  - {fileID: 303629980}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1139055054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1139055055}
+  m_Layer: 0
+  m_Name: ShoesDesign
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1139055055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139055054}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1571892651}
+  - {fileID: 1219913267}
+  m_Father: {fileID: 1866831199}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1146877774
 GameObject:
@@ -4486,7 +4666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1219913267
 Transform:
   m_ObjectHideFlags: 0
@@ -4496,11 +4676,11 @@ Transform:
   m_GameObject: {fileID: 1219913266}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.29, y: -2.958, z: -0.0036374102}
-  m_LocalScale: {x: 0.8747055, y: 0.8747055, z: 0.8747055}
+  m_LocalPosition: {x: -3.2900002, y: -2.9580002, z: -0.0036374102}
+  m_LocalScale: {x: 0.87470555, y: 0.87470555, z: 0.87470555}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1866831199}
+  m_Father: {fileID: 1139055055}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1219913268
 SpriteRenderer:
@@ -4542,7 +4722,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 30106e36dd5de274384803c4332595bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5725,7 +5905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1571892651
 Transform:
   m_ObjectHideFlags: 0
@@ -5735,11 +5915,11 @@ Transform:
   m_GameObject: {fileID: 1571892650}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.29, y: -2.958, z: -0.0036374102}
-  m_LocalScale: {x: 0.8747055, y: 0.8747055, z: 0.8747055}
+  m_LocalPosition: {x: -3.2900002, y: -2.9580002, z: -0.0036374102}
+  m_LocalScale: {x: 0.87470555, y: 0.87470555, z: 0.87470555}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1866831199}
+  m_Father: {fileID: 1139055055}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1571892652
 SpriteRenderer:
@@ -5924,11 +6104,11 @@ Transform:
   m_GameObject: {fileID: 1587951932}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.991, y: -0.59, z: -0.039893787}
+  m_LocalPosition: {x: 1.9909999, y: -0.59, z: -0.039893784}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1136071153}
+  m_Father: {fileID: 303629980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1587951934
 SpriteRenderer:
@@ -6890,14 +7070,12 @@ Transform:
   m_LocalScale: {x: 4.408478, y: 4.408478, z: 4.408478}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 927585756}
   - {fileID: 1191546937}
-  - {fileID: 78191255}
-  - {fileID: 227732214}
   - {fileID: 1428162475}
-  - {fileID: 1571892651}
   - {fileID: 968541838}
   - {fileID: 1573663476}
-  - {fileID: 1219913267}
+  - {fileID: 1139055055}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1971493497
@@ -7371,6 +7549,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9445551b3ac1564ea3e934a2e7327b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shoe1: {fileID: 0}
+  shoe2: {fileID: 0}
+  oldshoe1: {fileID: 0}
+  oldshoe2: {fileID: 0}
+  beanie: {fileID: 0}
+  coat: {fileID: 0}
 --- !u!1 &2115819932
 GameObject:
   m_ObjectHideFlags: 0
