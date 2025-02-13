@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class catcher : MonoBehaviour
 {
     [SerializeField] GameObject[] fruits;
+    [SerializeField] TextMeshProUGUI timeCount;
 
     public float timer;
+    public int timeCounter;
+    float tim = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +20,10 @@ public class catcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Timer();
+        timeCount.text = "Time:" + timeCounter;
+
+            
         if (timer > 0)
         {
             timer -= Time.deltaTime;
@@ -29,7 +37,17 @@ public class catcher : MonoBehaviour
             Instantiate(fruits[randFruit], fruitSpawn, Quaternion.identity);
 
             timer = Random.Range(1, 3);
+        }
+            
+    }
 
+    void Timer()
+    {
+        tim = tim + Time.deltaTime;
+        if(tim >= 1)
+        {
+            timeCounter++;
+            tim = 0;
         }
     }
 }

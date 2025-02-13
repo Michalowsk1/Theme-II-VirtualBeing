@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class scrpt : MonoBehaviour
 {
+    public static int reward;
     [SerializeField] Rigidbody2D player;
     [SerializeField] GameObject playerObj;
     public int speed;
@@ -11,6 +12,7 @@ public class scrpt : MonoBehaviour
     void Start()
     {
         //playerObj.transform.position = Vector2.zero;
+        reward = 0;
         speed = 7;
         player = GetComponent<Rigidbody2D>();
         //playerObj = GetComponent<GameObject>();

@@ -16,8 +16,13 @@ public class PurchaseBeanie : MonoBehaviour
     // Update is called once per frame
     public void PurchaseBeanies()
     {
-        storeBeanie.SetActive (false);
-        Beanie.SetActive (true);
+        if (scrpt.reward <= 1)
+        {
+            storeBeanie.SetActive(false);
+            Beanie.SetActive(true);
+            scrpt.reward--;
+        }
+        else { }
     }
 
 }

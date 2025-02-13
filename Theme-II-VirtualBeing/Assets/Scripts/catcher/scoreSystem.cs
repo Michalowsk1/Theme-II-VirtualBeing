@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class scoreSystem : MonoBehaviour
 {
@@ -15,7 +17,11 @@ public class scoreSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (score == 20)
+        {
+            SceneManager.LoadScene("MainScene");
+            scrpt.reward++;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
