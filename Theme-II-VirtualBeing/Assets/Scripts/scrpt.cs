@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class scrpt : MonoBehaviour
 {
-    public static int reward;
+    [SerializeField] public static int reward = 0;
     [SerializeField] Rigidbody2D player;
     [SerializeField] GameObject playerObj;
     public int speed;
@@ -12,7 +13,6 @@ public class scrpt : MonoBehaviour
     void Start()
     {
         //playerObj.transform.position = Vector2.zero;
-        reward = 0;
         speed = 7;
         player = GetComponent<Rigidbody2D>();
         //playerObj = GetComponent<GameObject>();
@@ -21,6 +21,7 @@ public class scrpt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
@@ -33,6 +34,10 @@ public class scrpt : MonoBehaviour
         else if (Input.GetKey(KeyCode.A))
         {
             player.transform.localScale = new Vector2(-4, 4);
+        }
+        else if(Input.GetKey(KeyCode.Space))
+        {
+            //nothing
         }
 
 

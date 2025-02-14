@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class scoreSystem : MonoBehaviour
 {
     [SerializeField] GameObject player;
+    [SerializeField] TextMeshProUGUI scoreCount;
     public int score;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,9 @@ public class scoreSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (score == 20)
+        scoreCount.text = "Score:" + score + "/15";
+
+        if (score == 15)
         {
             SceneManager.LoadScene("MainScene");
             scrpt.reward++;

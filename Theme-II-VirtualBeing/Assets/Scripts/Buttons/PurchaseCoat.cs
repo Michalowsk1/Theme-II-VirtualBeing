@@ -16,7 +16,10 @@ public class PurchaseCoat : MonoBehaviour
     // Update is called once per frame
     public void PurchasedCoat()
     {
-        storeCoat.SetActive(false );
-        coat.SetActive(true);
+        if (scrpt.reward >= 2)
+        {
+            storeCoat.SetActive(false);
+            coat.SetActive(true);
+        }
     }
 }

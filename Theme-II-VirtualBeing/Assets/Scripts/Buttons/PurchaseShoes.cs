@@ -23,8 +23,12 @@ public class PurchaseShoes : MonoBehaviour
 
     public void PurchasedShoes()
     {
-        storeShoe.SetActive(false);
-        shoe.SetActive(true);
-        oldShoe.SetActive(false);
+        if (scrpt.reward >= 3)
+        {
+            storeShoe.SetActive(false);
+            shoe.SetActive(true);
+            oldShoe.SetActive(false);
+        }
+        else { }
     }
 }
