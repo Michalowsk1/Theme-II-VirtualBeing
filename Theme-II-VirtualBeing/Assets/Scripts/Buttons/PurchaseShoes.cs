@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PurchaseShoes : MonoBehaviour
 {
     [SerializeField] GameObject storeShoe;
+    [SerializeField] TextMeshProUGUI storeShoesText;
     [SerializeField] GameObject shoe;
     [SerializeField] GameObject oldShoe;
     // Start is called before the first frame update
@@ -28,6 +30,7 @@ public class PurchaseShoes : MonoBehaviour
             storeShoe.SetActive(false);
             shoe.SetActive(true);
             oldShoe.SetActive(false);
+            storeShoesText.text = "Owned";
         }
         else { }
     }

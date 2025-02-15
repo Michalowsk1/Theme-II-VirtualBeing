@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PurchaseCoat : MonoBehaviour
 {
     [SerializeField] GameObject storeCoat;
+    [SerializeField] TextMeshProUGUI storeCoatText;
     [SerializeField] GameObject coat;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,7 @@ public class PurchaseCoat : MonoBehaviour
         {
             storeCoat.SetActive(false);
             coat.SetActive(true);
+            storeCoatText.text = "Owned";
         }
     }
 }

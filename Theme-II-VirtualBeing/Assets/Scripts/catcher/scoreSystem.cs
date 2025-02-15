@@ -4,11 +4,16 @@ using TMPro;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class scoreSystem : MonoBehaviour
 {
     [SerializeField] GameObject player;
     [SerializeField] TextMeshProUGUI scoreCount;
+    [SerializeField] TextMeshProUGUI PlayButton;
+    [SerializeField] GameObject mainMenu;
+    [SerializeField] GameObject catcher;
+    public Button play;
     public int score;
     // Start is called before the first frame update
     void Start()
@@ -23,7 +28,10 @@ public class scoreSystem : MonoBehaviour
 
         if (score == 15)
         {
-            SceneManager.LoadScene("MainScene");
+            catcher.SetActive(false);
+            mainMenu.SetActive(true);
+            PlayButton.text = "Completed";
+            play.enabled = false;
             scrpt.reward++;
         }
     }
