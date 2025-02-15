@@ -14,7 +14,7 @@ public class scoreSystem : MonoBehaviour
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject catcher;
     public Button play;
-    public int score;
+    public static int score;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +33,10 @@ public class scoreSystem : MonoBehaviour
             PlayButton.text = "Completed";
             play.enabled = false;
             scrpt.reward++;
+        }
+        else if(score < 0)
+        {
+            score = 0;
         }
     }
 

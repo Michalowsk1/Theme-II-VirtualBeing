@@ -7,6 +7,8 @@ public class catcher : MonoBehaviour
 {
     [SerializeField] GameObject[] fruits;
     [SerializeField] TextMeshProUGUI timeCount;
+    [SerializeField] GameObject mainMenu;
+    [SerializeField] GameObject catcherr;
 
     public float timer;
     public int timeCounter;
@@ -15,6 +17,7 @@ public class catcher : MonoBehaviour
     void Start()
     {
         timer = 2;
+        timeCounter = 45;
     }
 
     // Update is called once per frame
@@ -38,6 +41,14 @@ public class catcher : MonoBehaviour
 
             timer = Random.Range(1, 3);
         }
+
+        if(timeCounter == 0)
+        {
+            mainMenu.SetActive(true);
+            catcherr.SetActive(false);
+            scoreSystem.score = 0;
+            timeCounter = 45;
+        }
             
     }
 
@@ -46,7 +57,7 @@ public class catcher : MonoBehaviour
         tim = tim + Time.deltaTime;
         if(tim >= 1)
         {
-            timeCounter++;
+            timeCounter--;
             tim = 0;
         }
     }

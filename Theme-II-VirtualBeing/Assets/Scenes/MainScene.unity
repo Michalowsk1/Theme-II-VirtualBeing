@@ -1450,6 +1450,8 @@ MonoBehaviour:
   - {fileID: 3741841516999230048, guid: 48dda24c8dc98294f8f5dba6f947bbe7, type: 3}
   - {fileID: 8307841909076595855, guid: d4f6b2b872dc1e342932d32bece7b1d1, type: 3}
   timeCount: {fileID: 871302415}
+  mainMenu: {fileID: 2077516103}
+  catcherr: {fileID: 276299745}
   timer: 0
   timeCounter: 0
 --- !u!1 &342646451
@@ -3313,7 +3315,6 @@ MonoBehaviour:
   mainMenu: {fileID: 2077516103}
   catcher: {fileID: 276299745}
   play: {fileID: 1016803658}
-  score: 0
 --- !u!1 &722140410
 GameObject:
   m_ObjectHideFlags: 0
