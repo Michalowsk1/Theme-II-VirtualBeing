@@ -16,6 +16,8 @@ public class catcher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mainMenu.SetActive(true);
+        catcherr.SetActive(false);
         timer = 2;
         timeCounter = 45;
     }

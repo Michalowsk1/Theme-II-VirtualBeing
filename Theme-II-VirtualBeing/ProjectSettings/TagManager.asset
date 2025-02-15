@@ -6,6 +6,8 @@ TagManager:
   tags:
   - fruit
   - badFruit
+  - Death
+  - Win
   layers:
   - Default
   - TransparentFX

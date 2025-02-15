@@ -32,6 +32,7 @@ public class button : MonoBehaviour
 
     public void flapperLoad()
     {
+        flapper.varSpeed = 2.5f;
         mainMenu.SetActive(false);
         Flapper.SetActive(true);
     }
