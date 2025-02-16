@@ -18,11 +18,13 @@ public class PurchaseCoat : MonoBehaviour
     // Update is called once per frame
     public void PurchasedCoat()
     {
-        if (scrpt.reward >= 2)
+        if (scrpt.reward >= 1)
         {
             storeCoat.SetActive(false);
             coat.SetActive(true);
             storeCoatText.text = "Owned";
+
+            scrpt.reward--;
         }
     }
 }

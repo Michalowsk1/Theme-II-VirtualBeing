@@ -25,12 +25,14 @@ public class PurchaseShoes : MonoBehaviour
 
     public void PurchasedShoes()
     {
-        if (scrpt.reward >= 3)
+        if (scrpt.reward >= 1)
         {
             storeShoe.SetActive(false);
             shoe.SetActive(true);
             oldShoe.SetActive(false);
             storeShoesText.text = "Owned";
+
+            scrpt.reward--;
         }
         else { }
     }

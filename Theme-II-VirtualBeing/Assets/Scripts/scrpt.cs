@@ -6,6 +6,7 @@ using TMPro;
 public class scrpt : MonoBehaviour
 {
     [SerializeField] public static int reward = 0;
+    [SerializeField] TextMeshProUGUI rewardCount;
     [SerializeField] Rigidbody2D player;
     [SerializeField] GameObject playerObj;
     public int speed;
@@ -21,7 +22,7 @@ public class scrpt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        rewardCount.text = "Coins: " + reward;
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 

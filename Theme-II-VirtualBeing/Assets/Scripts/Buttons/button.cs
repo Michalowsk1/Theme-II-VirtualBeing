@@ -21,7 +21,7 @@ public class button : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void catcherLoad()
@@ -41,5 +41,23 @@ public class button : MonoBehaviour
     {
         mainMenu.SetActive(false);
         Parkour.SetActive(true);
+    }
+
+    public void QuitFlapperGame()
+    {
+        Flapper.SetActive(false);
+        mainMenu.SetActive(true);
+    }
+
+    public void QuitCatcherGame()
+    {
+        Catcher.SetActive(false);
+        mainMenu.SetActive(true);
+    }
+
+    public void QuitParkourGame()
+    {
+        Parkour.SetActive(false);
+        mainMenu.SetActive(true);
     }
 }

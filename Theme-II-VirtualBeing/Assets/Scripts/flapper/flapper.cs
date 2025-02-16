@@ -51,4 +51,12 @@ public class flapper : MonoBehaviour
             scrpt.reward++;
         }
     }
+
+    public void QuitButton()
+    {
+        mainMenu.SetActive(true);
+        flappers.SetActive(false);
+        varSpeed = 2.5f;
+        Player.position = Spawn.position;
+    }
 }
