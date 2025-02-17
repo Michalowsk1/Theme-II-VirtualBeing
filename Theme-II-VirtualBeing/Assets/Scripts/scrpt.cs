@@ -36,10 +36,6 @@ public class scrpt : MonoBehaviour
         {
             player.transform.localScale = new Vector2(-4, 4);
         }
-        else if(Input.GetKey(KeyCode.Space))
-        {
-            //nothing
-        }
 
 
         if (player.position.x <= -10)
