@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Controls : MonoBehaviour
 {
+    [Header ("GameObjects")]
     [SerializeField] Rigidbody2D player;
     [SerializeField] GameObject Player;
     [SerializeField] GameObject Fuel;
@@ -17,11 +18,14 @@ public class Controls : MonoBehaviour
     [SerializeField] TextMeshProUGUI playButtonText;
     [SerializeField] Button play;
 
-    public int speed = 4;
-    public static int fuelTime;
+    [Header("Variables")]
+    public Transform spawn;
+    int speed = 4;
+    int time;
+    public static float fuelTime;
     public static int Maxfuel;
     public int flightPower = 5;
-    public bool fuel = true;
+    bool fuel = true;
     public static int collectCount;
     // Start is called before the first frame update
     void Start()
@@ -35,7 +39,7 @@ public class Controls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fuelText.text = fuelTime + "%/" + Maxfuel + "%";
+        fuelText.text = fuelTime + "/" + Maxfuel;
         CollectableText.text = collectCount + "/3 Flowers";
 
 
@@ -56,12 +60,14 @@ public class Controls : MonoBehaviour
 
         if(Input.GetKey(KeyCode.Space) && fuel == true)
         {
+            timeCount();
+            fuelTime = Mathf.Round(fuelTime * 10.0f) * 0.1f;
             player.velocity = new Vector2(player.velocity.x, flightPower);
-            fuelTime--;
         }
 
         if (fuelTime <= 0)
         {
+            fuelTime = 0;
             fuel = false;
         }
 
@@ -75,12 +81,28 @@ public class Controls : MonoBehaviour
         }
     }
 
+    public void timeCount()
+    {
+        
+        time = time + 1;
+        if (time >= 2)
+        {
+            fuelTime--;
+            time = 0;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
             fuelTime = Maxfuel;
             fuel = true;
+        }
+
+        if (collision.gameObject.tag == "Kill")
+        {
+            player.position = spawn.position;
         }
     }
 }

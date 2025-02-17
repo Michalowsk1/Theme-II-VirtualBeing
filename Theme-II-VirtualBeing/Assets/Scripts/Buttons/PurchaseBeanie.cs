@@ -23,7 +23,7 @@ public class PurchaseBeanie : MonoBehaviour
             storeBeanie.SetActive(false);
             Beanie.SetActive(true);
             storeBeanieText.text = "Owned";
-
+            scrpt.drip++;
             scrpt.reward--;
         }
         else { }

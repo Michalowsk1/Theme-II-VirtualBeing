@@ -6,9 +6,11 @@ using TMPro;
 public class scrpt : MonoBehaviour
 {
     [SerializeField] public static int reward = 0;
+    [SerializeField] public static int drip = 0;
     [SerializeField] TextMeshProUGUI rewardCount;
     [SerializeField] Rigidbody2D player;
     [SerializeField] GameObject playerObj;
+    [SerializeField] GameObject Win;
     public int speed;
     // Start is called before the first frame update
     void Start()
@@ -46,6 +48,11 @@ public class scrpt : MonoBehaviour
         if (player.position.x >= 10)
         {
             playerObj.transform.position = new Vector2(-10, -2);
+        }
+
+        if(drip == 3)
+        {
+            Win.SetActive(true);
         }
     }
 }

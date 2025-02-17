@@ -31,7 +31,7 @@ public class PurchaseShoes : MonoBehaviour
             shoe.SetActive(true);
             oldShoe.SetActive(false);
             storeShoesText.text = "Owned";
-
+            scrpt.drip++;
             scrpt.reward--;
         }
         else { }

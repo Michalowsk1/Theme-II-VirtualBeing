@@ -23,7 +23,7 @@ public class PurchaseCoat : MonoBehaviour
             storeCoat.SetActive(false);
             coat.SetActive(true);
             storeCoatText.text = "Owned";
-
+            scrpt.drip++;
             scrpt.reward--;
         }
     }

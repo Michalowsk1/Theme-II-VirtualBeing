@@ -1,0 +1,16 @@
+VirtualPal
+Choose a minigame to play and earn coins to drip out your character
+Aim - get dripped out
+
+Flapper
+Reach the end of the level avoiding the spikes while using W & S keys to move up and down
+
+Catcher
+use the A & D arrows to catch 15 fruits while avoiding bombs before the timer runs out
+
+Parkour
+Use A & D keys to move and space key to fly while collecting fuel cannisters to fly for longer and collect all the flowers
+
+References
+background scroller
+Root Games, (2021). Unity 2D: Scrolling Background. [online] www.youtube.com. Available at: https://www.youtube.com/watch?v=Wz3nbQPYwss [Accessed 12 Jan. 2024].

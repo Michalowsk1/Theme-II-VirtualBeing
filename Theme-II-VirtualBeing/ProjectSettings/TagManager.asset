@@ -9,6 +9,7 @@ TagManager:
   - Death
   - Win
   - Ground
+  - Kill
   layers:
   - Default
   - TransparentFX
